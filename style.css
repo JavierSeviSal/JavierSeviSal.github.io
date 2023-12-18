@@ -12,13 +12,21 @@ header {
     padding: 50px 0;
 }
 
+header img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+}
+
 .intro {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 section {
-    padding: 50px 0;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -35,11 +43,11 @@ section {
 #publications {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .publication {
-    max-width: 300px;
+    flex: 0 1 calc(33.33% - 40px);
     margin: 20px;
     padding: 20px;
     background-color: #fff;
@@ -47,14 +55,14 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+@media screen and (max-width: 768px) {
+    .publication {
+        flex: 0 1 calc(50% - 40px);
+    }
 }
 
-header img {
-    display: block;
-    margin: 0 auto;
+@media screen and (max-width: 480px) {
+    .publication {
+        flex: 0 1 calc(100% - 40px);
+    }
 }
