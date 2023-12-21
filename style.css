@@ -40,35 +40,110 @@ h3 {
 }
 
 .social-links {
-    background-color: #f8f8f8;
-    padding: 20px 0;
+    padding: 40px 0;
+    text-align: center;
+    background: linear-gradient(45deg, #191cdf, #0093f5, #00ffaa);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .social-links h2 {
-    margin: 0 0 10px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .social-links ul {
-    list-style: none;
     padding: 0;
-    text-align: center;
+    list-style: none;
 }
 
 .social-links li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .social-links a {
+    display: inline-block;
     text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.social-links a:hover {
-    color: #007bff;
-    /* Change hover color to suit your preference */
+.social-links a:hover,
+.social-links a:focus {
+    transform: scale(1.05) rotateX(10deg);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+/* Add this to prevent animation from being cut off */
+.social-links a::before,
+.social-links a::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+}
+
+.social-links a::after {
+    background: inherit;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translate3d(0, 0, -1px);
+}
+
+.social-links a:hover::after,
+.social-links a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Individual icon hover effects */
+/* Use these classes in your HTML to apply specific styles */
+.researchgate-icon:hover {
+    color: #6cc644;
+    /* GitHub's default color */
+}
+
+.linkedin-icon:hover {
+    color: #00a6ff;
+    /* LinkedIn's default color */
+}
+
+.scholar-icon:hover {
+    color: #a600ff;
+    /* GitHub's default color */
+}
+
+.mail-icon:hover {
+    color: #ff0000;
+    /* LinkedIn's default color */
 }
 
 main {
