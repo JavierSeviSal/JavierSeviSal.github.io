@@ -78,39 +78,125 @@ main {
 #publications .publications-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     /* Adjusted from center to space-between for better spacing */
 }
 
 .publication {
-    flex: 0 1 calc(25% - 40px);
-    /* Decreased from 33.33% to 25% and adjusted margin */
-    display: block;
+    flex: 0 1 calc(25% - 80px);
+    /* Adjusted flex-basis to account for margins */
     margin: 20px;
-    /* Reduced margin for less whitespace */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* Contains the image within the border-radius */
+    position: relative;
     transition: box-shadow 0.3s ease;
+    perspective: 1000px;
+    min-height: 340px;
+    /* Define a minimum height here */
 }
 
-.publication a.publication-link {
+/* Robotic Scanner Animation */
+@keyframes scanner-animation {
+
+    0%,
+    100% {
+        transform: translateY(-100%);
+        /* Start and end outside of the publication card */
+        opacity: 0;
+    }
+
+    10%,
+    90% {
+        transform: translateY(0);
+        /* Move inside of the card during the 'scanning' */
+        opacity: 1;
+    }
+}
+
+.publication::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    /* The thickness of the scanner line */
+    background: rgba(0, 255, 0, 0.7);
+    /* A green scanner light */
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    /* Ensures the scanner does not interfere with clicking */
+}
+
+.publication:hover::after {
+    animation: scanner-animation 3s linear infinite;
+}
+
+.publication-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.publication:hover .publication-inner {
+    transform: rotateY(180deg);
+    /* Flip the card on hover */
+}
+
+.publication-front,
+.publication-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Hide the side not facing the screen */
+}
+
+.publication-front {
+    /* Any specific front styles */
+}
+
+.publication-back {
+    /* Any specific back styles */
+    transform: rotateY(180deg);
+    /* Rotate the backside ready for flip */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.publication-link {
+    /* ...adjust the styles for a more button-like appearance... */
+    display: inline-block;
+    margin-top: 15px;
+    /* Add some space above the link */
+    padding: 10px 15px;
+    background-color: #007bff;
+    /* Example button color */
+    color: #fff;
+    border-radius: 5px;
     text-decoration: none;
-    /* Removes underline from links */
-    color: inherit;
-    /* Inherits the text color from the parent */
-    display: block;
-    /* Makes the entire publication area clickable */
+    transition: background-color 0.3s ease;
 }
 
-.publication a.publication-link:hover {
-    /* You can add hover styles such as a change in background color */
-    /* Example: */
-    background-color: rgba(0, 0, 0, 0.05);
-    /* Slight change on hover to indicate interactivity */
+.publication-link:hover {
+    background-color: #0056b3;
+    /* Darker button color on hover */
 }
+
+.publication:hover .publication-image::before {
+    opacity: 1;
+    /* Reveal the overlay on hover */
+}
+
+
 
 .publication-image {
     width: 100%;
@@ -120,6 +206,25 @@ main {
     /* Ensures the image centers well */
     background-size: cover;
     /* Ensures the image covers the div */
+    transition: transform 0.3s ease;
+    /* Smooth transition for scale effect */
+    position: relative;
+    /* For the ::before pseudo-element positioning */
+}
+
+.publication-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    /* Creative gradient overlay */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for the hover effect */
 }
 
 .publication-image img {
@@ -158,36 +263,34 @@ main {
 
 /* Media Queries */
 
-/* For desktops and laptops */
-/* Override for larger desktop sizes */
+/* Considering desktops and laptops */
 @media screen and (min-width: 1025px) {
     .publication {
-        flex: 0 1 calc(20% - 40px);
-        /* Decrease the width for large screens */
-        /* Adjust the calculation based on your layout preference (lower percentage = smaller width) */
+        flex: 0 1 calc(40% - 100px);
+        /* Smaller percentage for a narrower card, note the increased margin deduction */
     }
 }
 
-/* Adjust desktop and laptop sizes */
+/* Adjusting for medium-sized screens such as tablets and smaller laptops */
 @media screen and (max-width: 1024px) {
     .publication {
-        flex: 0 1 calc(33.33% - 40px);
-        /* Suitable for medium-sized screens, like laptops */
+        flex: 0 1 calc(33.33% - 80px);
+        /* Increase size a bit for medium screens */
     }
 }
 
-/* Tablet view */
+/* Adjusting for tablet screen sizes */
 @media screen and (max-width: 768px) {
     .publication {
-        flex: 0 1 calc(50% - 40px);
-        /* Two publications per row on tablets */
+        flex: 0 1 calc(50% - 80px);
+        /* Taking up half the space for tablets */
     }
 }
 
-/* Mobile devices view */
+/* Adjusting for mobile devices */
 @media screen and (max-width: 480px) {
     .publication {
         flex: 0 1 calc(100% - 40px);
-        /* Full-width publications on mobiles */
+        /* Full width with smaller deduction for mobiles */
     }
 }
