@@ -82,23 +82,47 @@ main {
     /* Adjusted from center to space-between for better spacing */
 }
 
+
 .publication {
-    flex: 0 1 calc(33.33% - 30px);
-    margin-bottom: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* ...existing styles... */
+    display: flex;
+    flex-direction: column;
+    /* This ensures the image and content align vertically */
     overflow: hidden;
-    /* Added for clean image borders */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* To ensure the contents don't spill out */
 }
 
 .publication img {
     width: 100%;
-    height: auto;
-    vertical-align: middle;
-    /* Fixes any unwanted space below images */
+    display: block;
+    /* This removes any space gap under the image */
 }
+
+.publication-content {
+    padding: 15px;
+    /* Add padding around the text content */
+    text-align: left;
+    /* Aligns text to the left, it feels more natural for reading */
+}
+
+.publication h3 {
+    margin: 10px 0;
+    /* Added some spacing between the image, title, and description */
+    font-size: 1.25em;
+    /* Adjust the title size to your preference */
+}
+
+.publication p {
+    margin: 0 0 10px;
+    /* Keep paragraphs tight for better readability */
+    font-size: 0.95em;
+    /* Slightly reduced font-size for the description */
+    line-height: 1.6;
+    /* Adjust line-height for better legibility */
+    color: #666;
+    /* A softer color can make extended reading more comfortable */
+}
+
 
 .publication:hover {
     transform: translateY(-5px);
