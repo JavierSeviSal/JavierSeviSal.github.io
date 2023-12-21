@@ -97,45 +97,6 @@ main {
     /* Define a minimum height here */
 }
 
-/* Robotic Scanner Animation */
-@keyframes scanner-animation {
-
-    0%,
-    100% {
-        transform: translateY(-100%);
-        /* Start and end outside of the publication card */
-        opacity: 0;
-    }
-
-    10%,
-    90% {
-        transform: translateY(0);
-        /* Move inside of the card during the 'scanning' */
-        opacity: 1;
-    }
-}
-
-.publication::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    /* The thickness of the scanner line */
-    background: rgba(0, 255, 0, 0.7);
-    /* A green scanner light */
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    pointer-events: none;
-    /* Ensures the scanner does not interfere with clicking */
-}
-
-.publication:hover::after {
-    animation: scanner-animation 3s linear infinite;
-}
-
 .publication-inner {
     position: relative;
     width: 100%;
@@ -157,10 +118,6 @@ main {
     height: 100%;
     backface-visibility: hidden;
     /* Hide the side not facing the screen */
-}
-
-.publication-front {
-    /* Any specific front styles */
 }
 
 .publication-back {
