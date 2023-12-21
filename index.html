@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <img src="profile.png" alt="Your Photo" style="border-radius: 50%; max-width: 150px; height: auto;">
-        <div class="intro">
-            <h1>Your Name</h1>
-            <p>Welcome to my creative corner on the web!</p>
+        <div class="container">
+            <img src="profile.png" alt="Your Photo" class="profile-img">
+            <div class="intro">
+                <h1>Your Name</h1>
+                <p>Welcome to my creative corner on the web!</p>
+            </div>
         </div>
     </header>
-    <section id="links">
-        <h2>Connect with Me</h2>
-        <ul>
-            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-            <!-- Add more links as needed -->
-        </ul>
-    </section>
-    <section id="publications">
-        <h2>Publications</h2>
-        <div class="publication">
-            <img src="image1.jpg" alt="Publication 1">
-            <h3>Publication Title 1</h3>
-            <p>A brief description of the publication. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <nav class="social-links">
+        <div class="container">
+            <h2>Connect with Me</h2>
+            <ul>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+                <!-- Add more links as needed -->
+            </ul>
         </div>
-        <div class="publication">
-            <img src="image2.jpg" alt="Publication 2">
-            <h3>Publication Title 2</h3>
-            <p>Another fascinating publication. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <!-- Add more publication entries as needed -->
-    </section>
+    </nav>
+    <main>
+        <section id="publications" class="container">
+            <h2>Publications</h2>
+            <div class="publications-grid">
+                <!-- Publication entries -->
+                <!-- Repeat publication entry for each publication -->
+                <div class="publication">
+                    <img src="image1.jpg" alt="Publication 1">
+                    <h3>Publication Title 1</h3>
+                    <p>A brief description of the publication. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <!-- ...other publications... -->
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>Contact: your@email.com</p>
+        <div class="container">
+            <p>Contact: your@email.com</p>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
