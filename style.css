@@ -118,8 +118,10 @@ main {
 
 .publication-content {
     padding: 15px;
-    /* Decreased padding for a compact look */
-    text-align: left;
+    text-align: justify;
+    /* Justify the text content */
+    text-justify: inter-word;
+    /* Improves readability for justified text */
 }
 
 .publication-content h3 {
@@ -141,30 +143,35 @@ main {
 /* Media Queries */
 
 /* For desktops and laptops */
-@media screen and (max-width: 1024px) {
+/* Override for larger desktop sizes */
+@media screen and (min-width: 1025px) {
     .publication {
-        flex: 0 1 calc(33% - 40px);
-        /* Increase the size a bit on smaller desktops */
+        flex: 0 1 calc(20% - 40px);
+        /* Decrease the width for large screens */
+        /* Adjust the calculation based on your layout preference (lower percentage = smaller width) */
     }
 }
 
-/* For tablets */
+/* Adjust desktop and laptop sizes */
+@media screen and (max-width: 1024px) {
+    .publication {
+        flex: 0 1 calc(33.33% - 40px);
+        /* Suitable for medium-sized screens, like laptops */
+    }
+}
+
+/* Tablet view */
 @media screen and (max-width: 768px) {
     .publication {
         flex: 0 1 calc(50% - 40px);
-        /* Display two publications per row on tablets */
+        /* Two publications per row on tablets */
     }
 }
 
-/* For mobile devices */
+/* Mobile devices view */
 @media screen and (max-width: 480px) {
     .publication {
         flex: 0 1 calc(100% - 40px);
-        /* Full width for mobile devices */
-    }
-
-    .publication-image {
-        height: 180px;
-        /* Smaller image height on mobile */
+        /* Full-width publications on mobiles */
     }
 }
