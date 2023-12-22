@@ -42,7 +42,7 @@ h3 {
 .social-links {
     padding: 40px 0;
     text-align: center;
-    background: linear-gradient(45deg, #191cdf, #0093f5, #00ffaa);
+    background: linear-gradient(45deg, #0048ff, #00f5f1, #00ff73);
     background-size: 300% 300%;
     animation: gradientShift 8s ease infinite;
 }
@@ -71,14 +71,25 @@ h3 {
 .social-links ul {
     padding: 0;
     list-style: none;
+    display: flex;
+    /* Makes sure that your list items are flex items, which will help evenly distribute space */
+    flex-wrap: wrap;
+    /* Allows items to wrap onto multiple lines */
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Centers items vertically */
 }
 
 .social-links li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 15px 15px;
+    /* Adds horizontal and vertical margin space */
+
 }
 
 .social-links a {
+    margin: 5px 0;
     display: inline-block;
     text-decoration: none;
     color: #ffffff;
