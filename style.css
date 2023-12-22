@@ -170,7 +170,6 @@ main {
 
 .publication {
     flex: 0 1 calc(25% - 80px);
-    /* Adjusted flex-basis to account for margins */
     margin: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -178,9 +177,12 @@ main {
     overflow: hidden;
     position: relative;
     transition: box-shadow 0.3s ease;
-    perspective: 1000px;
-    min-height: 340px;
-    /* Define a minimum height here */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures that content and button are spaced out */
+    min-height: 300px;
+    /* Increase min-height to fit all content comfortably */
 }
 
 .publication-inner {
@@ -216,16 +218,15 @@ main {
 }
 
 .publication-link {
-    /* ...adjust the styles for a more button-like appearance... */
     display: inline-block;
-    margin-top: 15px;
-    /* Add some space above the link */
+    margin-top: auto;
+    /* Pushes button to the bottom due to the `space-between` on the flex container */
     padding: 10px 15px;
     background-color: #007bff;
-    /* Example button color */
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -283,25 +284,34 @@ main {
 .publication-content {
     padding: 15px;
     text-align: justify;
-    /* Justify the text content */
-    text-justify: inter-word;
-    /* Improves readability for justified text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    /* Adjust according to needs, factoring in image, title, and button heights */
+    overflow: hidden;
 }
 
 .publication-content h3 {
     font-size: 1.1rem;
-    /* Adjusted font size for headline */
     margin-top: 10px;
-    /* Space from image to title */
     margin-bottom: 5px;
-    /* Space from title to description */
 }
+
 
 .publication-content p {
     font-size: 0.9rem;
-    /* Smaller font size for paragraph */
-    margin-bottom: 10px;
-    /* Reduced bottom margin */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /* Specify the number of lines you want to show before truncation. Adjust line-clamp based on available space */
+    margin: 0 auto 10px;
+    /* Ensure some space at the bottom */
+    line-height: 1.4;
+    /* Adjust line-height for better readability */
+    height: calc(5 * 1.4em);
+    /* Adjust the height based on the line-height and -webkit-line-clamp. Here, 1.4em * the number of lines */
 }
 
 /* Media Queries */
