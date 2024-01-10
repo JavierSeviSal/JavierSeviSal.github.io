@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javier Sevilla Salcedo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@300;400;700&display=swap"
         rel="stylesheet">
@@ -14,20 +14,20 @@
 <body>
     <header>
         <div class="container">
-            <img src="profile.png" alt="Javier Sevilla Salcedo" class="profile-img">
+            <img src="img/profile.png" alt="Javier Sevilla Salcedo" class="profile-img">
             <div class="intro">
                 <h1>Javier Sevilla Salcedo</h1>
-                <p>I'm Javier Sevilla Salcedo, a Systems Engineering and Automation researcher and lecturer at Carlos
-                    III University of Madrid. With a B.Sc. in Industrial Electronics and Automation Engineering from the
-                    University of Jaén, and a subsequent master's in Robotics and Automation at Carlos III, I'm now
-                    pursuing a Ph.D. in Electrical Engineering, Electronics, and Automation.
-                </p>
+                <p>I'm Javier Sevilla Salcedo, a Systems Engineering and Automation researcher at Carlos
+                    III University of Madrid currently pursuing a Ph.D. in Electrical Engineering, Electronics, and
+                    Automation. With a B.Sc. in Industrial Electronics and Automation Engineering from the
+                    University of Jaén, and a subsequent master's in Robotics and Automation at Carlos III.
+
+
                 <p>My career spans practical experience in the automotive industry's robotics and automation sectors,
                     along with over four years of research in process automation, social robotics, and Natural Language
                     Processing (NLP). I designed a robotic guitar tuner for my bachelor's project and developed
-                    intuitive NLP applications for social robots during my master's.
-                </p>
-                <p>Currently, my research is deeply rooted in AI and NLP, with significant interests in Social Robotics
+                    intuitive NLP applications for social robots during my master's. Currently, my research is deeply
+                    rooted in AI and NLP, with significant interests in Social Robotics
                     and cutting-edge methodologies including Deep Learning and Deep Reinforcement Learning. My goal is
                     to elevate the ways in which robots cognitively perceive and engage with the environment around
                     them.</p>
@@ -52,14 +52,82 @@
     </nav>
     <main>
         <section id="publications" class="container">
-            <h2>Publications</h2>
+            <h2>Journal Publications</h2>
             <div class="publications-grid">
+
                 <div class="publication">
                     <div class="publication-inner">
                         <!-- Front Side of the Card -->
                         <div class="publication-front">
                             <div class="publication-image">
-                                <img src="Gert_logo.png" alt="Publication 1">
+                                <img src="img/uasdg.jpg"
+                                    alt="Using Large Language Models to Shape Social Robots’ Speech">
+                            </div>
+                            <div class="publication-content">
+                                <h3>Using Large Language Models to Shape Social Robots’ Speech</h3>
+                            </div>
+                        </div>
+                        <!-- Back Side of the Card (the detailed view) -->
+                        <div class="publication-back">
+                            <div class="publication-content">
+                                <h3>Using Large Language Models to Shape Social Robots’ Speech [IJIMAI 8 (3)]</h3>
+                                <p>Two methods are proposed: one for rephrasing existing utterances to retain their
+                                    meaning
+                                    but introduce variation, and the other for creating topic-specific speech that
+                                    adapts to the
+                                    conversation partner. The results are promising, but challenges such as
+                                    computational
+                                    demands, interaction delays, reliance on proprietary models, and the need for
+                                    subjective
+                                    evaluation are noted as constraints.
+                                </p>
+                                <a href="https://www.ijimai.org/journal/bibcite/reference/3352" target="_blank"
+                                    class="publication-link">Read
+                                    Publication</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="publication">
+                    <div class="publication-inner">
+                        <!-- Front Side of the Card -->
+                        <div class="publication-front">
+                            <div class="publication-image">
+                                <img src="img/bio-insp.png" alt="Publication 8">
+                            </div>
+                            <div class="publication-content">
+                                <h3>A Bio-Inspired Endogenous Attention-Based Architecture for a Social Robot</h3>
+                            </div>
+                        </div>
+                        <!-- Back Side of the Card (the detailed view) -->
+                        <div class="publication-back">
+                            <div class="publication-content">
+                                <h3>A Bio-Inspired Endogenous Attention-Based Architecture for a Social Robot [Sensors
+                                    22 (14)]</h3>
+                                <p>Introducing a perception architecture for social robots, inspired by endogenous
+                                    attention mechanisms, enhancing robots' interaction with their environment and
+                                    users.</p>
+                                <a href="https://www.mdpi.com/1424-8220/22/14/5248" target="_blank"
+                                    class="publication-link">Read Publication</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2>International Conferences</h2>
+            <div class="publications-grid">
+
+                <div class="publication">
+                    <div class="publication-inner">
+                        <!-- Front Side of the Card -->
+                        <div class="publication-front">
+                            <div class="publication-image">
+                                <img src="img/Gert_logo.png" alt="Publication 1">
                             </div>
                             <div class="publication-content">
                                 <h3>GERT: Transformers for Co-speech Gesture Prediction in Social Robots</h3>
@@ -68,7 +136,9 @@
                         <!-- Back Side of the Card (the detailed view) -->
                         <div class="publication-back">
                             <div class="publication-content">
-                                <h3>GERT: Transformers for Co-speech Gesture Prediction in Social Robots</h3>
+                                <h3>GERT: Transformers for Co-speech Gesture Prediction in Social Robots [ICSR '23]
+                                </h3>
+
                                 <p>GERT (Gesture-Enhanced Robotics Transformer), a set of three transformer-based models
                                     designed to
                                     predict gestures that align with a robot's verbal communication. The research
@@ -89,73 +159,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Publication entries -->
-
-                <!-- ...other publications... -->
-                <div class="publication">
-                    <div class="publication-inner">
-                        <!-- Front Side of the Card -->
-                        <div class="publication-front">
-                            <div class="publication-image">
-                                <img src="uasdg.jpg" alt="Using Large Language Models to Shape Social Robots’ Speech">
-                            </div>
-                            <div class="publication-content">
-                                <h3>Using Large Language Models to Shape Social Robots’ Speech</h3>
-                            </div>
-                        </div>
-                        <!-- Back Side of the Card (the detailed view) -->
-                        <div class="publication-back">
-                            <div class="publication-content">
-                                <h3>Using Large Language Models to Shape Social Robots’ Speech</h3>
-                                <p>Two methods are proposed: one for rephrasing existing utterances to retain their
-                                    meaning
-                                    but introduce variation, and the other for creating topic-specific speech that
-                                    adapts to the
-                                    conversation partner. The results are promising, but challenges such as
-                                    computational
-                                    demands, interaction delays, reliance on proprietary models, and the need for
-                                    subjective
-                                    evaluation are noted as constraints.
-                                </p>
-                                <a href="https://reunir.unir.net/handle/123456789/15198" target="_blank"
-                                    class="publication-link">Read
-                                    Publication</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="publication">
                     <div class="publication-inner">
                         <!-- Front Side of the Card -->
                         <div class="publication-front">
                             <div class="publication-image">
-                                <img src="gest_rob.png" alt="Publication 3">
-                            </div>
-                            <div class="publication-content">
-                                <h3>Predicción de gestos no-verbales usando aprendizaje profundo</h3>
-                            </div>
-                        </div>
-                        <!-- Back Side of the Card (the detailed view) -->
-                        <div class="publication-back">
-                            <div class="publication-content">
-                                <h3>Predicción de gestos no-verbales usando aprendizaje profundo</h3>
-                                <p>This study introduces a deep learning system using transformer models to predict
-                                    non-verbal gestures for social robots, surpassing previous techniques for natural
-                                    human-robot interactions.</p>
-                                <a href="https://ruc.udc.es/dspace/handle/2183/33644" target="_blank"
-                                    class="publication-link">Read Publication</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="publication">
-                    <div class="publication-inner">
-                        <!-- Front Side of the Card -->
-                        <div class="publication-front">
-                            <div class="publication-image">
-                                <img src="pipeline.webp" alt="Publication 4">
+                                <img src="img/pipeline.webp" alt="Publication 4">
                             </div>
                             <div class="publication-content">
                                 <h3>User-Adapted Semantic Description Generation Using Natural Language Models</h3>
@@ -164,7 +174,8 @@
                         <!-- Back Side of the Card (the detailed view) -->
                         <div class="publication-back">
                             <div class="publication-content">
-                                <h3>User-Adapted Semantic Description Generation Using Natural Language Models</h3>
+                                <h3>User-Adapted Semantic Description Generation Using Natural Language Models [ISAMI
+                                    '22]</h3>
                                 <p>Exploring the creation of user-profile-specific descriptions by employing natural
                                     language generation models to provide more fluid and natural human-computer
                                     interactions.</p>
@@ -180,7 +191,7 @@
                         <!-- Front Side of the Card -->
                         <div class="publication-front">
                             <div class="publication-image">
-                                <img src="paraphraser.webp" alt="Publication 5">
+                                <img src="img/paraphraser.webp" alt="Publication 5">
                             </div>
                             <div class="publication-content">
                                 <h3>Using Deep Learning for Implementing Paraphrasing in a Social Robot</h3>
@@ -189,7 +200,7 @@
                         <!-- Back Side of the Card (the detailed view) -->
                         <div class="publication-back">
                             <div class="publication-content">
-                                <h3>Using Deep Learning for Implementing Paraphrasing in a Social Robot</h3>
+                                <h3>Using Deep Learning for Implementing Paraphrasing in a Social Robot [ISAMI '22]</h3>
                                 <p>This research enhances the conversational abilities of a social robot by introducing
                                     models capable of generating contextually appropriate Spanish paraphrases.</p>
                                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-22356-3_21" target="_blank"
@@ -199,12 +210,45 @@
                     </div>
                 </div>
 
+            </div>
+
+            <h2>National Conferences</h2>
+            <div class="publications-grid">
+
                 <div class="publication">
                     <div class="publication-inner">
                         <!-- Front Side of the Card -->
                         <div class="publication-front">
                             <div class="publication-image">
-                                <img src="arteterapia.png" alt="Publication 6">
+                                <img src="img/gest_rob.png" alt="Publication 3">
+                            </div>
+                            <div class="publication-content">
+                                <h3>Predicción de gestos no-verbales usando aprendizaje profundo</h3>
+                            </div>
+                        </div>
+                        <!-- Back Side of the Card (the detailed view) -->
+                        <div class="publication-back">
+                            <div class="publication-content">
+                                <h3>Predicción de gestos no-verbales usando aprendizaje profundo [XLIV Jornadas de
+                                    Automática]</h3>
+                                <p>This study introduces a deep learning system using transformer models to predict
+                                    non-verbal gestures for social robots, surpassing previous techniques for natural
+                                    human-robot interactions.</p>
+                                <a href="https://ruc.udc.es/dspace/handle/2183/33644" target="_blank"
+                                    class="publication-link">Read Publication</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="publication">
+                    <div class="publication-inner">
+                        <!-- Front Side of the Card -->
+                        <div class="publication-front">
+                            <div class="publication-image">
+                                <img src="img/arteterapia.png" alt="Publication 6">
                             </div>
                             <div class="publication-content">
                                 <h3>ARTETERAPIA: una estrategia para incrementar el vínculo en la robótica social</h3>
@@ -213,7 +257,9 @@
                         <!-- Back Side of the Card (the detailed view) -->
                         <div class="publication-back">
                             <div class="publication-content">
-                                <h3>ARTETERAPIA: una estrategia para incrementar el vínculo en la robótica social</h3>
+                                <h3>ARTETERAPIA: una estrategia para incrementar el vínculo en la robótica social [XLIII
+                                    Jornadas de
+                                    Automática]</h3>
                                 <p>Addressing the societal divide between the elderly and the young, this article
                                     proposes using art therapy with social robots to enhance the psychophysical state of
                                     older adults.</p>
@@ -229,7 +275,7 @@
                         <!-- Front Side of the Card -->
                         <div class="publication-front">
                             <div class="publication-image">
-                                <img src="storyteller.png" alt="Publication 7">
+                                <img src="img/storyteller.png" alt="Publication 7">
                             </div>
                             <div class="publication-content">
                                 <h3>Modelos de lenguaje natural para robots sociales</h3>
@@ -238,7 +284,8 @@
                         <!-- Back Side of the Card (the detailed view) -->
                         <div class="publication-back">
                             <div class="publication-content">
-                                <h3>Modelos de lenguaje natural para robots sociales</h3>
+                                <h3>Modelos de lenguaje natural para robots sociales [XLIII Jornadas de
+                                    Automática]</h3>
                                 <p>Discussing the role of natural language generation models in enhancing communication
                                     of social robots and making human-robot interactions more dynamic and adaptable.</p>
                                 <a href="https://ruc.udc.es/dspace/handle/2183/31342" target="_blank"
@@ -248,51 +295,28 @@
                     </div>
                 </div>
 
-                <div class="publication">
-                    <div class="publication-inner">
-                        <!-- Front Side of the Card -->
-                        <div class="publication-front">
-                            <div class="publication-image">
-                                <img src="bio-insp.png" alt="Publication 8">
-                            </div>
-                            <div class="publication-content">
-                                <h3>A Bio-Inspired Endogenous Attention-Based Architecture for a Social Robot</h3>
-                            </div>
-                        </div>
-                        <!-- Back Side of the Card (the detailed view) -->
-                        <div class="publication-back">
-                            <div class="publication-content">
-                                <h3>A Bio-Inspired Endogenous Attention-Based Architecture for a Social Robot</h3>
-                                <p>Introducing a perception architecture for social robots, inspired by endogenous
-                                    attention mechanisms, enhancing robots' interaction with their environment and
-                                    users.</p>
-                                <a href="https://www.mdpi.com/1424-8220/22/14/5248" target="_blank"
-                                    class="publication-link">Read Publication</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="publication">
                     <div class="publication-inner">
                         <!-- Front Side of the Card -->
                         <div class="publication-front">
                             <div class="publication-image">
-                                <img src="engag.png" alt="Publication 9">
+                                <img src="img/engag.png" alt="Publication 9">
                             </div>
                             <div class="publication-content">
-                                <h3>Aplicación de estrategias psicológicas y sociales para incrementar el vínculo en
-                                    interacción humano-robot</h3>
+                                <h3>Aplicando de estrategias psicológicas y sociales para incrementar el vínculo en
+                                    interacción humano-robot </h3>
                             </div>
                         </div>
                         <!-- Back Side of the Card (the detailed view) -->
                         <div class="publication-back">
                             <div class="publication-content">
-                                <h3>Aplicación de estrategias psicológicas y sociales para incrementar el vínculo en
-                                    interacción humano-robot</h3>
+                                <h3>Aplicando de estrategias psicológicas y sociales para incrementar el vínculo en
+                                    interacción humano-robot [Jornadas de Robótica, Educación y Bioingeniería 2022]</h3>
                                 <p>Enhancing the bond in human-robot interaction via social psychology and game theory
                                     principles, aiming to build trust and increase the usability of social robots.</p>
-                                <a href="https://e-archivo.uc3m.es/bitstream/handle/10016/37040/aplicacion_RIAI_2023.pdf?sequence=3"
+                                <a href="https://www.researchgate.net/publication/367129004_Aplicando_herramientas_psicologicas_para_incrementar_el_vinculo_entre_los_usuarios_y_los_robots_sociales"
                                     target="_blank" class="publication-link">Read Publication</a>
                             </div>
                         </div>

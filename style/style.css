@@ -16,6 +16,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    text-align: justify;
 }
 
 .profile-img {
@@ -304,13 +305,13 @@ main {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     /* Specify the number of lines you want to show before truncation. Adjust line-clamp based on available space */
     margin: 0 auto 10px;
     /* Ensure some space at the bottom */
     line-height: 1.4;
     /* Adjust line-height for better readability */
-    height: calc(5 * 1.4em);
+    height: calc(4 * 1.4em);
     /* Adjust the height based on the line-height and -webkit-line-clamp. Here, 1.4em * the number of lines */
 }
 
