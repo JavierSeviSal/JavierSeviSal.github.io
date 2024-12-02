@@ -18,9 +18,12 @@ header {
 }
 
 .inline-image {
-    margin-left: 10px; /* Add some space between the text and the image */
-    height: 30px; /* Reduce the image size as needed */
-    width: auto; /* Maintain aspect ratio */
+    margin-left: 800px; /* Add some space between the text and the image */
+    margin-top: -90px; /* Adjust the margin to align the image with the text */
+    height: 100px; /* Reduce the image size as needed */
+    width: auto;
+    display: flex;
+    align-items: right; /* Vertically center the text and image */
 }
 
 .container {
@@ -28,8 +31,6 @@ header {
     margin: 0 auto;
     padding: 0 15px;
     text-align: justify;
-    display: flex;
-    align-items: center; 
 }
 
 .profile-img {
