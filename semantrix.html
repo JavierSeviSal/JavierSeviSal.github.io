@@ -20,12 +20,12 @@
     <main>
         <div class="container">
             <p id="content">
-                <h2>FORMULARIO PARA PRESTAR CONSENTIMIENTO A LA CESIÓN DE DATOS PARA LA EJECUCIÓN Y DESARROLLO DE UN TRABAJO DE INVESTIGACIÓN ORGANIZADO POR LA UNIVERSIDAD CARLOS III DE MADRID</h2>
-                <h1>DATOS IDENTIFICATIVOS DE LA PERSONA INTERESADA:</h1>
+                <h1>FORMULARIO PARA PRESTAR CONSENTIMIENTO A LA CESIÓN DE DATOS PARA LA EJECUCIÓN Y DESARROLLO DE UN TRABAJO DE INVESTIGACIÓN ORGANIZADO POR LA UNIVERSIDAD CARLOS III DE MADRID</h1>
+                <h3>DATOS IDENTIFICATIVOS DE LA PERSONA INTERESADA:</h3>
                 <p>Nombre y apellidos</p> 
-                <h1>DATOS DE CONTACTO</h1>
+                <h3>DATOS DE CONTACTO</h3>
                 <p>Correo electrónico</p>
-                <h1>Breve descripción del trabajo de investigación:</h1>
+                <h3>Breve descripción del trabajo de investigación:</h3>
                 <p>Estudio acerca de la relación entre la interacción con un juego de palabras basado en la semántica y la capacidad del usuario para encontrar la palabra secreta. Los usuarios deben evaluar el vínculo que se genera al interactuar con la interfaz/robot mientras intentan cumplir el objetivo del juego.</p>
                 <p>El experimento constará de dos partes:     </p>
                 Los usuarios interactuarán con el juego Semantrix intentando deducir la palabra secreta mediante pistas semánticas proporcionadas por la interfaz. Durante esta fase, se observará cómo el usuario se involucra con el juego y qué estrategias utiliza para aproximarse al objetivo.
@@ -38,16 +38,16 @@
                 <p>Mi participación es voluntaria y libre.</p>
                 <p>Se me ha informado sobre la posibilidad de revocar mi consentimiento en cualquier momento.</p>
 
-    <div class="info">
-        <h2>Información Básica sobre Protección de Datos</h2>
-        <ul>
-            <li><strong>Responsable:</strong> Universidad Carlos III de Madrid</li>
-            <li><strong>Identificación del Tratamiento:</strong> PI_Semantrix_HRI</li>
-            <li><strong>Finalidad del Tratamiento:</strong> Ejecución y desarrollo del trabajo de investigación para la evaluación Semantrix.</li>
-            <li><strong>Ejercicio de Derechos:</strong> Puede ejercer sus derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición ante el responsable del tratamiento en la dirección de correo: <a href="mailto:dpd@uc3m.es">dpd@uc3m.es</a></li>
-            <li><strong>Información Adicional:</strong> Consulte la información adicional sobre protección de datos personales en nuestra <a href="http://www.uc3m.es/protecciondatos" target="_blank">página web</a>.</li>
-        </ul>
-    </div>
+                <div class="info">
+                    <h3>Información Básica sobre Protección de Datos</h3>
+                    <ul>
+                        <li><strong>Responsable:</strong> Universidad Carlos III de Madrid</li>
+                        <li><strong>Identificación del Tratamiento:</strong> PI_Semantrix_HRI</li>
+                        <li><strong>Finalidad del Tratamiento:</strong> Ejecución y desarrollo del trabajo de investigación para la evaluación Semantrix.</li>
+                        <li><strong>Ejercicio de Derechos:</strong> Puede ejercer sus derechos de acceso, rectificación, supresión, limitación, portabilidad y oposición ante el responsable del tratamiento en la dirección de correo: <a href="mailto:dpd@uc3m.es">dpd@uc3m.es</a></li>
+                        <li><strong>Información Adicional:</strong> Consulte la información adicional sobre protección de datos personales en nuestra <a href="http://www.uc3m.es/protecciondatos" target="_blank">página web</a>.</li>
+                    </ul>
+                </div>
 
     <p>Al continuar con la prueba: </p>
     <p>Autorizo expresamente a que, con ocasión de la difusión de los resultados del proyecto, mis datos personales seudonimizados sean objeto de publicación, para lo cual bastará con que se me informe al respecto, mediante una comunicación al correo electrónico facilitado.</p>
@@ -55,11 +55,29 @@
     <nav class="social-links">
         <div class="container">
             <ul>
-                <li><a href="https://google.com">Empezar</a></li>
+                <li><a href="#" id="randomLink">Empezar</a></li>
+                <script>
+                    document.getElementById('randomLink').addEventListener('click', function(event) {
+                        event.preventDefault(); // Prevent the default action of the link
+                
+                        // Define your URLs
+                        var urls = [
+                            "https://example1.com",
+                            "https://example2.com",
+                            "https://example3.com",
+                            "https://example4.com"
+                        ];
+                
+                        // Randomly select a URL
+                        var randomUrl = urls[Math.floor(Math.random() * urls.length)];
+                
+                        // Redirect to the randomly selected URL
+                        window.location.href = randomUrl;
+                    });
+                </script>
             </ul>
         </div>
     </nav>
-                <button onclick="window.location.href='google.com'">Visit Example.com</button>
             </section>
         </div>
     </main>
